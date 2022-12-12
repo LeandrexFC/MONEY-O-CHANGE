@@ -19,7 +19,7 @@ const requestIss = () => ({
 const responseApiSuccess = (api) => ({
   type: REQUEST_API_SUCCESS,
   payload: {
-    api,
+    api: Object.keys(api).filter((key) => key !== 'USDT'),
   },
 });
 

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class WalletForm extends Component {
   render() {
     const { wallet } = this.props;
-    const walletArray = Object.keys(wallet).filter((arr) => arr !== 'USDT');
+
     return (
       <form>
         Despesa:
@@ -14,7 +14,7 @@ class WalletForm extends Component {
         <input type="text" data-testid="description-input" />
         Moeda:
         <select data-testid="currency-input">
-          {walletArray.map((eachWallet) => (
+          {wallet.map((eachWallet) => (
             <option key={ eachWallet } value={ eachWallet }>
               {eachWallet}
             </option>
