@@ -7,6 +7,9 @@ export const REQUEST_API_ERROR = 'REQUEST_API_ERROR';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
 export const REQUEST_TASK_SUCCESS = 'REQUEST_TASK_SUCCESS';
 export const ATT_STATE_REDUX = 'ATT_STATE_REDUX';
+export const DELETE_EXPENSES = 'DELETE_EXPENSES';
+export const EDIT_EXPENSES = 'EDIT_EXPENSES';
+export const EXPENSES_EDITED = 'EXPENSES_EDITED';
 
 export const addEmail = (email) => ({
   type: ADD_EMAIL,
@@ -37,6 +40,21 @@ export const addExpenses = (expenses) => ({
   type: ADD_EXPENSES,
   payload: expenses,
 
+});
+
+export const deleteExpenses = (expenseId) => ({
+  type: DELETE_EXPENSES,
+  payload: expenseId,
+});
+
+export const editExpenses = (expenseId) => ({
+  type: EDIT_EXPENSES,
+  payload: expenseId,
+});
+
+export const expensesEdited = (expenses) => ({
+  type: EXPENSES_EDITED,
+  payload: expenses,
 });
 
 export const getFetchEconomyApi = () => async (dispatch) => {

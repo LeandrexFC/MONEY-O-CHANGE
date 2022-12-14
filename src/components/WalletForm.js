@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addExpenses, fetchEconomyApi } from '../redux/actions';
+import { addExpenses, fetchEconomyApi, expensesEdited } from '../redux/actions';
 import getEconomys from '../services/EconomyApi';
 
 class WalletForm extends Component {
@@ -56,8 +56,28 @@ class WalletForm extends Component {
     });
   };
 
+  saveEditExpenses = () => {
+    const { expenses, dispatch, idToEdit } = this.props;
+    const { value, description, currency, method, tag } = this.state;
+
+    const expensesMap = expenses.map((expense) => {
+      if (expense.id === idToEdit) {
+        return {
+          ...expense,
+          value,
+          description,
+          currency,
+          method,
+          tag };
+      }
+      return expense;
+    });
+
+    dispatch(expensesEdited(expensesMap));
+  };
+
   render() {
-    const { wallet } = this.props;
+    const { wallet, edit } = this.props;
     const { method, value, description,
       tag, currency } = this.state;
     return (
@@ -154,8 +174,13 @@ class WalletForm extends Component {
             Saúde
           </option>
         </select>
-        <button type="button" onClick={ this.saveExpenses }>
-          Adicionar despesa
+        <button
+          type="button"
+          onClick={ !edit ? this.saveExpenses : this.saveEditExpenses }
+        >
+          {
+            !edit ? 'Adicionar despesa' : 'Editar despesa'
+          }
         </button>
       </form>
     );
@@ -165,11 +190,15 @@ class WalletForm extends Component {
 const mapStateToProps = (globalState) => ({
   wallet: globalState.wallet.currencies,
   ask: globalState.wallet.exchangeRates,
+  edit: globalState.wallet.editor,
+  expenses: globalState.wallet.expenses,
+  idToEdit: globalState.wallet.idToEdit,
 });
 
 WalletForm.propTypes = {
   wallet: PropTypes.arrayOf(PropTypes.string).isRequired,
   dispatch: PropTypes.func.isRequired,
-};
+  expenses: PropTypes.array,
+}.isRequired;
 
 export default connect(mapStateToProps)(WalletForm);
