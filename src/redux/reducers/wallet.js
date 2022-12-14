@@ -1,4 +1,7 @@
-import { REQUEST_API, REQUEST_API_SUCCESS, REQUEST_API_ERROR } from '../actions';
+import { REQUEST_API,
+  REQUEST_API_SUCCESS,
+  REQUEST_API_ERROR,
+  ADD_EXPENSES } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -22,7 +25,7 @@ const walletReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       isLoading: false,
-      currencies: action.payload.api,
+      currencies: action.payload.currencies,
     };
   }
 
@@ -31,6 +34,14 @@ const walletReducer = (state = INITIAL_STATE, action) => {
       ...state,
       isLoading: false,
       errorMessage: action.payload.error || 'Error 404',
+    };
+  }
+
+  case ADD_EXPENSES: {
+    return {
+      ...state,
+      isLoading: false,
+      expenses: [...state.expenses, action.payload],
     };
   }
 

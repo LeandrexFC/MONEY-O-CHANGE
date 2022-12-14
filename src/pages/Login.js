@@ -38,7 +38,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form onSubmit={ this.redirectToWallet }>
+      <form>
         Email:
         <input
           name="email"
