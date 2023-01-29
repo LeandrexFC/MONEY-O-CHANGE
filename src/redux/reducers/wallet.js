@@ -1,7 +1,8 @@
 import { REQUEST_API,
   REQUEST_API_SUCCESS,
   REQUEST_API_ERROR,
-  ADD_EXPENSES, DELETE_EXPENSES, EDIT_EXPENSES, EXPENSES_EDITED } from '../actions';
+  ADD_EXPENSES, DELETE_EXPENSES,
+  EDIT_EXPENSES, EXPENSES_EDITED } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -19,21 +20,18 @@ const walletReducer = (state = INITIAL_STATE, action) => {
       ...state,
       isLoading: true,
     };
-
   case REQUEST_API_SUCCESS:
     return {
       ...state,
       isLoading: false,
       currencies: action.payload.currencies,
     };
-
   case REQUEST_API_ERROR:
     return {
       ...state,
       isLoading: false,
       errorMessage: action.payload.error || 'Error 404',
     };
-
   case ADD_EXPENSES:
     return {
       ...state,
@@ -49,18 +47,20 @@ const walletReducer = (state = INITIAL_STATE, action) => {
   case EDIT_EXPENSES:
     return {
       ...state,
-      isLoading: false,
       editor: true,
       idToEdit: action.payload,
     };
   case EXPENSES_EDITED:
     return {
       ...state,
-      isLoading: false,
       editor: false,
       expenses: action.payload,
     };
-
+  // case INPUTS_ATT:
+  //   return {
+  //     ...state,
+  //     test: action.payload,
+  //   };
   default: return state;
   }
 };

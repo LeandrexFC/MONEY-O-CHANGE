@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addEmail } from '../redux/actions';
+import LoginImg from '../Img/logoTrybe Wallet.png';
+import bankImg from '../Img/bankImg.jpg';
+import '../allCss/Login.css';
 
 class Login extends React.Component {
   state = {
@@ -38,32 +41,42 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form>
-        Email:
-        <input
-          name="email"
-          type="email"
-          data-testid="email-input"
-          placeholder="Digite seu Email:"
-          onChange={ this.onInputchange }
-          required
-        />
-        Senha:
-        <input
-          name="password"
-          type="password"
-          data-testid="password-input"
-          placeholder="Digite sua senha:"
-          onChange={ this.onInputchange }
-        />
-        <button
-          type="button"
-          onClick={ this.attReducerAndRedirect }
-          disabled={ !this.validateButton() }
-        >
-          Entrar
-        </button>
-      </form>
+      <div className="allLogin">
+        <div className="wallpaper">
+          <img src={ bankImg } alt="bank Img" className="bankImg" />
+        </div>
+        <div className="login">
+          <img src={ LoginImg } alt="Login img" className="loginImg" />
+          <form className="form">
+            <input
+              className="inputsTexts"
+              name="email"
+              type="email"
+              data-testid="email-input"
+              placeholder="E-mail:"
+              onChange={ this.onInputchange }
+              required
+            />
+            <input
+              className="inputsTextss"
+              name="password"
+              type="password"
+              data-testid="password-input"
+              placeholder="Senha:"
+              onChange={ this.onInputchange }
+            />
+            <button
+              className="enterButton"
+              type="button"
+              onClick={ this.attReducerAndRedirect }
+              disabled={ !this.validateButton() }
+            >
+              Entrar
+            </button>
+          </form>
+        </div>
+
+      </div>
     );
   }
 }
@@ -71,7 +84,7 @@ class Login extends React.Component {
 Login.propTypes = {
   dispatch: PropTypes.func.isRequired,
   history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
+    push: PropTypes.func,
   }).isRequired,
 };
 

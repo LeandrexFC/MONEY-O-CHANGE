@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { deleteExpenses, editExpenses } from '../redux/actions';
+import { deleteExpenses, editExpenses, inputsAtt } from '../redux/actions';
 
 class Table extends Component {
   deleteAllExpenses = (expenseId) => {
@@ -11,9 +11,20 @@ class Table extends Component {
   };
 
   editSomeExpenses = (expense) => {
-    const { dispatch } = this.props;
+    const { dispatch, expenses } = this.props;
+
+    const { value, description, currency, method, tag } = expenses[expense];
+
+    const inputsObj = {
+      value,
+      description,
+      currency,
+      method,
+      tag,
+    };
 
     dispatch(editExpenses(expense));
+    dispatch(inputsAtt(inputsObj));
   };
 
   render() {

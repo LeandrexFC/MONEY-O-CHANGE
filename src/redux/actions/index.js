@@ -10,6 +10,7 @@ export const ATT_STATE_REDUX = 'ATT_STATE_REDUX';
 export const DELETE_EXPENSES = 'DELETE_EXPENSES';
 export const EDIT_EXPENSES = 'EDIT_EXPENSES';
 export const EXPENSES_EDITED = 'EXPENSES_EDITED';
+export const INPUTS_ATT = 'INPUTS_ATT';
 
 export const addEmail = (email) => ({
   type: ADD_EMAIL,
@@ -57,15 +58,10 @@ export const expensesEdited = (expenses) => ({
   payload: expenses,
 });
 
-export const getFetchEconomyApi = () => async (dispatch) => {
-  dispatch(requestIss());
-  try {
-    const response = await getEconomys();
-    dispatch(attStateRedux(response));
-  } catch (error) {
-    dispatch(responseApiError(error));
-  }
-};
+export const inputsAtt = (expenses) => ({
+  type: INPUTS_ATT,
+  payload: expenses,
+});
 
 export const fetchEconomyApi = () => async (dispatch) => {
   dispatch(requestIss());
