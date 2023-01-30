@@ -1,0 +1,27 @@
+.allTable {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  border: solid 5px green;
+  display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.table {
+  border: solid 5px yellow;
+  width: 90%;
+  height: 80vh;
+  background: #003BE5;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.thead {
+  display: flex;
+}

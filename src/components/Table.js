@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteExpenses, editExpenses, inputsAtt } from '../redux/actions';
+import '../allCss/Table.css';
 
 class Table extends Component {
   deleteAllExpenses = (expenseId) => {
@@ -30,9 +31,9 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <div>
-        <table>
-          <thead>
+      <div className="allTable">
+        <table className="table">
+          <thead className="thead">
             <tr>
               <th> Descrição </th>
               <th> Tag </th>

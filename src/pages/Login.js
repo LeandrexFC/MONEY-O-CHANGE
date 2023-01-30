@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addEmail } from '../redux/actions';
-import LoginImg from '../Img/logoTrybe Wallet.png';
-import bankImg from '../Img/bankImg.jpg';
+import LoginImg from '../Img/logoTrybeWallet.png';
 import '../allCss/Login.css';
 
 class Login extends React.Component {
@@ -42,9 +41,6 @@ class Login extends React.Component {
   render() {
     return (
       <div className="allLogin">
-        <div className="wallpaper">
-          <img src={ bankImg } alt="bank Img" className="bankImg" />
-        </div>
         <div className="login">
           <img src={ LoginImg } alt="Login img" className="loginImg" />
           <form className="form">
@@ -66,8 +62,8 @@ class Login extends React.Component {
               onChange={ this.onInputchange }
             />
             <button
-              className="enterButton"
-              type="button"
+              className={ this.validateButton() ? 'enterButton' : 'disabledButton' }
+              type="submit"
               onClick={ this.attReducerAndRedirect }
               disabled={ !this.validateButton() }
             >
