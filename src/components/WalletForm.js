@@ -83,104 +83,119 @@ class WalletForm extends Component {
     return (
       <div className="allForm">
         <div className="form">
-          Descrição da despesa:
-          <input
-            type="text"
-            data-testid="description-input"
-            name="description"
-            value={ description }
-            onChange={ this.onInputChange }
-            className="inputs"
-          />
-          Categoria da despesa:
-          <select
-            name="tag"
-            data-testid="tag-input"
-            onChange={ this.onInputChange }
-            value={ tag }
-            className="inputs"
-          >
-            <option
-              value="Alimentação"
+          <label htmlFor="inputs">
+            Descrição da despesa:
+            <input
+              type="text"
+              data-testid="description-input"
+              name="description"
+              value={ description }
               onChange={ this.onInputChange }
-            >
-              Alimentação
-            </option>
-            <option
-              value="Lazer"
+              className="inputs"
+              id="inputs"
+            />
+          </label>
+          <label htmlFor="categoryy">
+            Categoria da despesa:
+            <select
+              name="tag"
+              data-testid="tag-input"
               onChange={ this.onInputChange }
+              value={ tag }
+              className="inputs"
+              id="categoryy"
             >
-              Lazer
-            </option>
-            <option
-              value="Trabalho"
-              onChange={ this.onInputChange }
-            >
-              Trabalho
-            </option>
-            <option
-              value="Transporte"
-              onChange={ this.onInputChange }
-            >
-              Transporte
-            </option>
-            <option
-              value="Saúde"
-              onChange={ this.onInputChange }
-            >
-              Saúde
-            </option>
-          </select>
-          Valor:
-          <input
-            type="number"
-            data-testid="value-input"
-            name="value"
-            value={ value }
-            onChange={ this.onInputChange }
-            className="inputs"
-          />
-          Método de Pagamento:
-          <select
-            name="method"
-            data-testid="method-input"
-            value={ method }
-            onChange={ this.onInputChange }
-            className="inputs"
-          >
-            <option
-              value="Dinheiro"
-              onChange={ this.onInputChange }
-            >
-              Dinheiro
-            </option>
-            <option
-              value="Cartão de crédito"
-              onChange={ this.onInputChange }
-            >
-              Cartão de crédito
-            </option>
-            <option
-              value="Cartão de débito"
-              onChange={ this.onInputChange }
-            >
-              Cartão de débito
-            </option>
-          </select>
-          Moeda:
-          <select
-            data-testid="currency-input"
-            name="currency"
-            value={ currency }
-            onChange={ this.onInputChange }
-            className="inputs"
-          >
-            {wallet.map((eachWallet) => (
-              <option key={ eachWallet } value={ eachWallet }>
-                {eachWallet}
+              <option
+                value="Alimentação"
+                onChange={ this.onInputChange }
+              >
+                Alimentação
               </option>
-            ))}
-          </select>
+              <option
+                value="Lazer"
+                onChange={ this.onInputChange }
+              >
+                Lazer
+              </option>
+              <option
+                value="Trabalho"
+                onChange={ this.onInputChange }
+              >
+                Trabalho
+              </option>
+              <option
+                value="Transporte"
+                onChange={ this.onInputChange }
+              >
+                Transporte
+              </option>
+              <option
+                value="Saúde"
+                onChange={ this.onInputChange }
+              >
+                Saúde
+              </option>
+            </select>
+          </label>
+          <label htmlFor="num">
+            Valor:
+            <input
+              type="number"
+              data-testid="value-input"
+              name="value"
+              value={ value }
+              onChange={ this.onInputChange }
+              className="inputs"
+              id="num"
+            />
+          </label>
+          <label htmlFor="methodd">
+            Método de Pagamento:
+            <select
+              name="method"
+              data-testid="method-input"
+              value={ method }
+              onChange={ this.onInputChange }
+              className="inputs"
+              id="methodd"
+            >
+              <option
+                value="Dinheiro"
+                onChange={ this.onInputChange }
+              >
+                Dinheiro
+              </option>
+              <option
+                value="Cartão de crédito"
+                onChange={ this.onInputChange }
+              >
+                Cartão de crédito
+              </option>
+              <option
+                value="Cartão de débito"
+                onChange={ this.onInputChange }
+              >
+                Cartão de débito
+              </option>
+            </select>
+          </label>
+          <label htmlFor="currency">
+            Moeda:
+            <select
+              data-testid="currency-input"
+              name="currency"
+              value={ currency }
+              onChange={ this.onInputChange }
+              className="inputs"
+              id="currency"
+            >
+              {wallet.map((eachWallet) => (
+                <option key={ eachWallet.id } value={ eachWallet }>
+                  {eachWallet}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
         <button
           className="btnForm"

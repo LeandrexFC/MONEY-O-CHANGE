@@ -43,13 +43,14 @@ class Login extends React.Component {
       <div className="allLogin">
         <div className="login">
           <img src={ LoginImg } alt="Login img" className="loginImg" />
-          <form className="form">
+          <form className="formm">
             <input
               className="inputsTexts"
               name="email"
               type="email"
+              id="email"
               data-testid="email-input"
-              placeholder="E-mail:"
+              placeholder="usuario@email.com"
               onChange={ this.onInputchange }
               required
             />

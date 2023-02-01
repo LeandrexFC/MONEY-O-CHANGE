@@ -10,9 +10,9 @@ html {
   align-items: flex-start;
   height: 100vh;
   color: white;
-  background: url('../Img/bankImg.jpg') no-repeat bottom center scroll;
+  /* background: url('../Img/bankImg.jpg') no-repeat bottom center scroll;
   background-position: 30% 5%;
-  background-size: cover;
+  background-size: cover; */
 }
 
 
@@ -23,15 +23,15 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 80%;
-  width: 80%;
+  height: 60%;
+  width: 70%;
   align-items: baseline;
 }
 
 .headerImg {
   width: 320px;
-  height: 100px;
-  margin-top: 5vh;
+  height: 70px;
+  margin-top: 7vh;
 }
 
 .expenses {
@@ -49,5 +49,5 @@ html {
   font-family: 'Epilogue';
   font-style: normal;
   font-weight: 700;
-  color: #2FC18C;;
+  color: #2FC18C;
 }

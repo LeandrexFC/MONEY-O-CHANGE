@@ -56,11 +56,7 @@ const walletReducer = (state = INITIAL_STATE, action) => {
       editor: false,
       expenses: action.payload,
     };
-  // case INPUTS_ATT:
-  //   return {
-  //     ...state,
-  //     test: action.payload,
-  //   };
+
   default: return state;
   }
 };

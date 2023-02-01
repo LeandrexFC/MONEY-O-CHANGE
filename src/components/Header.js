@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import logoTrybe from '../Img/logoTrybeWallet.png';
 import '../allCss/Header.css';
-import WalletForm from './WalletForm';
 
 class Header extends Component {
   render() {

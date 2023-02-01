@@ -1,27 +1,74 @@
+body {
+  background-image: url('../Img/bankImg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+
+
 .allTable {
   position: absolute;
   z-index: 2;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  border: solid 5px green;
+  width: 100%;
   display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
+  justify-content: center;
+  align-items: flex-start;
+  
 }
 
 .table {
-  border: solid 5px yellow;
-  width: 90%;
-  height: 80vh;
+  margin-top: 30vh;
+  width: 95%;
+  height: auto;
   background: #003BE5;
   box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
   border-radius: 10px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
 }
 
 .thead {
+  width: 100%;
   display: flex;
+  margin-top: 40vh;
 }
+
+.trTable {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+   border: solid 5px green;
+   
+}
+
+.tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.trBody {
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  border: solid 5px red;
+  padding: 5px;
+}
+
+.tdTable {
+ margin-right: 10vh;
+}
+
+/* .tdTable4 {
+  padding-right: 50vh;
+} */

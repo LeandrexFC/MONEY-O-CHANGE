@@ -1,59 +1,60 @@
 .form {
   z-index: 3;
   position: absolute;
-    width: 80%; 
-    height: 30%;
-    display: flex;
-    background: rgba(225, 229, 235, 0.49);
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    color: #003BE5;
-    font-family: 'Epilogue';
-font-style: normal;
-font-weight: 700;
-font-size: 17px;
-line-height: 14px;
+  width: 68%;
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  color: #003BE5;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 14px;
+  background: rgba(225, 229, 235, 0.49);
 }
 
 .allForm {
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 75vh;
   top: 0;
   align-items: center;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  
 }
 
 .inputs {
   border: 1px solid #003BE5;
-border-radius: 5px;
-color: #003BE5;
-width: 288.86px;
-height: 30px;
-margin-right: 15px;
-margin-left: 15px;
-margin-bottom: 15px;
-background-color: white;
+  border-radius: 5px;
+  color: #003BE5;
+  width: 200px;
+  height: 23px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  background-color: white;
 }
 
 .btnForm {
+  z-index: 3;
   border: solid 5px green;
-  margin-top: 40vh;
+  margin-top: 30vh;
   width: 330px;
-height: 40px;
-background: #2FC18C;
-border: 1px solid #2FC18C;
-border-radius: 5px;
-cursor: pointer;
-color: white;
+  height: 40px;
+  background: #2FC18C;
+  border: 1px solid #2FC18C;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
 
 .btnForm:hover {
   opacity: 0.8;
-} 
+}
