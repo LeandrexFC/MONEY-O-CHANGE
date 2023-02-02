@@ -58,3 +58,77 @@
 .btnForm:hover {
   opacity: 0.8;
 }
+
+
+@media ( max-width : 928px ) {  
+
+  .form {
+    z-index: 3;
+    position: absolute;
+    width: 68%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-content: center;
+    color: #003BE5;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 14px;
+    background-color: white;
+  }
+
+  .inputs {
+    border: 1px solid #003BE5;
+    border-radius: 5px;
+    color: #003BE5;
+    max-width: 150px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+}
+
+@media (max-width : 700px ) {
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    color: #003BE5;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: white;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .allHeader {
+    width: 70%;
+  }
+
+  .btnForm {
+    z-index: 3;
+    border: solid 5px green;
+    margin-top: 35vh;
+    width: 100%;
+    max-width: 130px;
+    height: 40px;
+    background: #2FC18C;
+    border: 1px solid #2FC18C;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+}
