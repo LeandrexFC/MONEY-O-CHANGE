@@ -114,10 +114,6 @@
     align-items: stretch;
   }
 
-  .allHeader {
-    width: 70%;
-  }
-
   .btnForm {
     z-index: 3;
     border: solid 5px green;
@@ -131,4 +127,20 @@
     cursor: pointer;
     color: white;
   }
+}
+
+  @media (max-width : 460px ) {
+    .btnForm {
+      z-index: 3;
+      border: solid 5px green;
+      margin-top: 45vh;
+      width: 100%;
+      max-width: 130px;
+      height: 40px;
+      background: #2FC18C;
+      border: 1px solid #2FC18C;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
 }

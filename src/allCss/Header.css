@@ -89,3 +89,10 @@ html {
     height: 65%;
   }
 }
+
+@media (max-width : 460px ) {
+  .allHeader {
+    width: 90%;
+    height: 65%;
+  }
+}
