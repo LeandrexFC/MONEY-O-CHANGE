@@ -17,7 +17,6 @@ class Table extends Component {
   };
 
   editSomeExpenses = (expense) => {
-    console.log(expense);
     const { dispatch, expenses } = this.props;
 
     const { value, description, currency, method, tag } = expenses[expense];
