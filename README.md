@@ -1,21 +1,21 @@
-<h1> TU-TU-TUNES 🎶 </h1>  
+
+<h1>  MONEY-O-CHANGE 💰</h1>  
 
 <div>
-<h2> About: </h2><p>A music streaming platform that lets you search for your favorite artists and play their albums, add songs to your favorites, and edit your profile picture. </p>
+<h2> About: </h2><p>Welcome to MONEY-O-CHANGE, your personal currency converter. </p>
 </div>
-
 
 <h2>Features: </h2>
 <ul> 
-<li>Search for artists; </li>
-<li>Play album previews; </li>
-<li> Favorite songs; </li>
-<li>Edit profile picture. </li>
+<li>Input expenses in your local currency </li>
+<li>Choose your desired currency for conversion </li>
+<li> View the amount in the selected currency compared to REAL </li>
+<li>Save all expenses </li>
 
 </ul>
 
 🖼️ View:
-![image](https://user-images.githubusercontent.com/110482797/216839924-3e397eac-f4e4-409a-bb36-7039cec00a7a.png)
+![image](![Money-O-Change](https://user-images.githubusercontent.com/110482797/216841726-7582b661-7bcf-4be8-8d48-a5606a57e950.png))
 
 <h2>💻 Technologies: </h2>
 
