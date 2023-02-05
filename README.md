@@ -7,15 +7,15 @@
 
 <h2>Features: </h2>
 <ul> 
-<li>Input expenses in your local currency </li>
 <li>Choose your desired currency for conversion </li>
 <li> View the amount in the selected currency compared to REAL </li>
+<li>Edit expenses </li>
 <li>Save all expenses </li>
 
 </ul>
 
 🖼️ View:
-![image](![Money-O-Change](https://user-images.githubusercontent.com/110482797/216841726-7582b661-7bcf-4be8-8d48-a5606a57e950.png))
+![image](https://user-images.githubusercontent.com/110482797/216842590-a777eff7-d265-4425-adf7-873f208b15fd.png)
 
 <h2>💻 Technologies: </h2>
 
