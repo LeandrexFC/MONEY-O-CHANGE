@@ -35,4 +35,3 @@
 Credits:
 
 - [Trybe Course](https://www.betrybe.com/) for all knowledge.
-<p> folder "Services" Created By Trybe.</p>
