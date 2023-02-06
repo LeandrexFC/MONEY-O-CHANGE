@@ -32,6 +32,8 @@
 </br>
 
 
-Credits:
+<h4>Acknowledgements: </h4>
 
-- [Trybe Course](https://www.betrybe.com/) for all knowledge.
+- [Trybe Course](https://www.betrybe.com/) for the teachings.
+<br/>
+
